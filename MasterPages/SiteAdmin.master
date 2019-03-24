@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/Site.Master" AutoEventWireup="true" CodeFile="SiteAdmin.master.cs" Inherits="MasterPages_SiteAdmin" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="PageTitle" Runat="Server">
+    <asp:ContentPlaceHolder ID="PageTitle" runat="server"/>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
+    <div style="float:left; border-right:1px dotted #bbbbbb; padding-right:4px;">
+        <asp:TreeView ID="TreeView1" runat="server">
+            <Nodes>
+                <asp:TreeNode Text="Definitions" Value="Author &amp; Publisher">
+                    <asp:TreeNode Text="Nationalities" NavigateUrl="~/Admin/Nationalities.aspx"></asp:TreeNode>
+                    <asp:TreeNode Text="Authors" NavigateUrl="~/Admin/Authors.aspx"></asp:TreeNode>
+                    <asp:TreeNode Text="Publishers" NavigateUrl="~/Admin/Publishers.aspx"></asp:TreeNode>
+                </asp:TreeNode>
+                <asp:TreeNode Text="Books" Value="Books">
+                    <asp:TreeNode Text="Categories" NavigateUrl="~/Admin/Categories.aspx"></asp:TreeNode>
+                    <asp:TreeNode Text="Books" NavigateUrl="~/Admin/Books.aspx"></asp:TreeNode>
+                    <asp:TreeNode Text="Add Book" NavigateUrl="~/Admin/BookEdit.aspx"></asp:TreeNode>
+                    <asp:TreeNode Text="Comments" NavigateUrl="~/Admin/Comments.aspx"></asp:TreeNode>
+                </asp:TreeNode>
+                <asp:TreeNode Text="Sales Reports">
+                    <asp:TreeNode Text="Daily Report" NavigateUrl="~/Admin/DailyReport.aspx" />
+                    <asp:TreeNode Text="Monthly Report" NavigateUrl="~/Admin/MonthlyReport.aspx" />
+                </asp:TreeNode>
+            </Nodes>
+        </asp:TreeView>
+    </div>
+    <div style="float:left; padding-left:8px">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+</asp:Content>
+

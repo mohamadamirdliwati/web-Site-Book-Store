@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="MasterPages_SiteMaster" %>
+<%@ Register src="~/Controls/ctlMenu.ascx" tagname="ctlMenu" tagprefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>AWP BookStore</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-1256" />
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    
+        window.onerror = function (errorMsg, url, lineNumber) {
+            alert("Error at line "+lineNumber + "\r" + errorMsg);
+            return true;
+        }
+        
+        function BindControlEvents() {
+            $('input').live('focus', function (e) {
+                highlight(this);
+            });
+
+            $("a[href=#]").attr("onclick", "javascript:return(false);");
+            $("a[href=#]").bind("mousemove", function (e) {
+                //$(this).css('display','none');
+                e.preventDefault();
+                return false;
+            });
+            $("a[href=#]").bind("mouseout", function (e) {
+                //alert('h');
+                e.preventDefault();
+                //return false;
+            });
+        }
+        
+    </script>    
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptLocalization="true" EnableScriptGlobalization="true">
+        </asp:ScriptManager>
+        <div class="page">
+            <div class="header">
+                <div class="siteTitle">AWP<br/>BookStore</div>
+                <br />
+                <div class="loginDisplay">
+
+                    <% if (clsGlobal.IsLogged)
+                       {%>
+
+                        Welcome: <b><%=clsGlobal.CurrentUserName()%></b>!
+                        [ <asp:LinkButton ID="lnkLogOut" runat="server" Text="Log Out" OnClick="lnkLogOut_Click" /> ]
+                    <%} else{%>
+                        [ <a href="~/Login.aspx" ID="HeadLoginStatus" runat="server">Login</a> ]
+                    <%}%>
+                </div>
+                
+            </div>                
+
+            <uc1:ctlMenu ID="ctlMenu1" runat="server" />
+
+            <div class="PageTitle">
+                <asp:SiteMapPath runat="server" ID="SiteMapPath1" ParentLevelsDisplayed="0" />
+                <asp:ContentPlaceHolder ID="PageTitle" runat="server"/>
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="footer">
+        
+        </div>
+    </form>
+</body>
+</html>

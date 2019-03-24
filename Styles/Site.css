@@ -1,0 +1,646 @@
+﻿*
+{
+    font-size: 10pt;
+    font-family: "Tahoma", "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+}
+
+body   
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Tahoma", "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+    direction:ltr;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+input[type="text"], select 
+{
+    border:1px solid #999999;
+}
+
+input[readonly]
+{
+    background:#eeeeee;
+    border:1px solid #999999;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h1 *, h2, h3, h4, h5, h6
+{
+    font-family: Times New Roman;
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+    margin-top:0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+.Grid
+{
+    background-color:White;
+    
+    /*border:2px solid #4A3C8C;*/
+    border:1px solid #000084;
+    Color:#4A3C8C;
+    width:100%;
+}
+
+.GridHeader, .Grid > tbody > tr > th
+{
+    /*background-color:#000084;*/
+    background-color:#000084;;
+    /*border:1px dotted white;*/
+    font-weight:bold;
+    border-color:#4A3C8C;
+    color:White;
+    /*Color:#F7F7F7;*/
+}
+
+/*
+.Grid > tbody > tr > th:first-child
+{
+    border-right:1px solid #4A3C8C;
+}
+.Grid > tbody > tr > th:last-child
+{
+    border-bottom:1px solid #4A3C8C;
+}
+*/
+
+.GridRowHover, .Grid > tbody > tr:hover, input:focus, select:focus
+{
+    background-color:#ffffaa;
+}
+.GridRow
+{
+    background-color:#F7F7F7;
+}
+.GridAlternatingRow
+{
+    background-color:#E7E7FF;
+}
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background-color: #4b6c9e;
+    width: 100%;
+    background:url(../images/head.jpg) right bottom;
+    height:200px;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding:  0px 20px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    min-height: 350px;
+    margin-left: 8px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+a[accesskey]:after {
+	content: " [" attr(accesskey) "]";
+	}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+div.hideSkiplink a[href*='#']
+{
+    float:left;
+}
+div.hideSkiplink
+{
+    background-color:#3a4f63;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-right:4px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    /*padding: 4px 20px;*/
+    padding:4px 8px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+div.menu img
+{
+    border:none;
+    width:24px;
+    height:24px;
+    vertical-align:middle;
+    padding-left:8px;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    
+    margin: 1em 0px;
+    padding: 1em;
+    /*border: 1px solid #ccc;*/
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-family: "Times New Roman (Arabic)";
+    font-size: 12pt;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.siteTitle
+{
+    font-family:Times New Roman;
+    font-size:24pt;
+    color:#aa00aa;
+    
+    padding:40px;
+}
+.title
+{
+    font-family: "Times New Roman";
+    float: right;
+    text-align: center;
+    width: 100%;
+}
+.PageTitle, .PageTitle span
+{
+    font-family: "Times New Roman";
+    font-size:14pt;
+    font-weight:bold;
+    background-color:#aaaaff;
+    padding:4px;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    text-align: left;
+    padding: 10px;
+    color: White;
+    float:right;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: left;
+    padding-right: 10px;
+}
+
+.popupPanel
+{
+    max-height:80%;
+    overflow:auto;
+    background:white;
+    border:3px double black;
+    padding-bottom:0px;
+    padding:0px;
+}
+
+.modalBackground 
+{ 
+    position: absolute; 
+    z-index: 100; 
+    top: 0px; 
+    left: 0px; 
+    background-color: #000000; 
+
+    filter: alpha(opacity=60); 
+    -moz-opacity: 0.6; 
+    opacity: 0.6; 
+}
+
+.popupButtons
+{
+    text-align:left;
+    padding-bottom:4px;
+}
+
+.popupPanel .PopupHeader
+{
+    color:White;
+    width:100%;
+    background:#000099;
+    margin-bottom:1px;
+    /*cursor:move;*/
+}
+
+.popupTitle
+{
+    font-family:Times New Roman;
+    font-size:14pt;
+    color:#000099;
+    font-weight:bold;
+}
+.popupSubTitle
+{
+    color:White;
+    font-weight:bold;
+    /*float:right;*/
+}
+
+.popupPanel .dragme {
+    cursor: pointer;
+}
+.popupContents
+{
+    overflow:auto;
+    min-height:100px;
+    padding:4px;
+}
+.popupPanel .popupButtons
+{
+    /*float:left;*/
+    vertical-align:bottom;
+    cursor:default;
+}
+
+.button
+{
+    font-family:Tahoma;
+    font-size:10pt;
+    padding-left:28px;
+    padding-right:8px;
+    background:bottom no-repeat;
+    background-position:8px;
+    text-decoration:none;
+}
+.button:hover
+{
+    text-decoration:none;
+    border-bottom:1px solid red;
+}
+.PopupHeader .popupButtons .button
+{
+    color:White;
+    text-decoration:none;
+}
+.PopupHeader .popupButtons .button:hover
+{
+    color:White;
+    text-decoration:underline;
+}
+.Add
+{
+    background-image:url(/images/btnAdd.png);
+}
+.Edit
+{
+    background-image:url(/images/btnEdit.png);
+}
+.Save
+{
+    background-image:url(/images/btnSave.png);
+}
+.SaveEdit
+{
+    background-image:url(/images/btnSaveEdit.png);
+}
+.SaveAdd
+{
+    background-image:url(/images/btnSaveAdd.png);
+}
+.SaveClose
+{
+    background-image:url(/images/btnSaveClose.png);
+}
+.Close
+{
+    background-image:url(/images/btnClose.png);
+}
+.Delete
+{
+    background-image:url(/images/btnDelete.png);
+}
+.Refresh
+{
+    background-image:url(/images/btnRefresh.png);
+}
+.Search
+{
+    background-image:url(/images/btnSearch.png);
+}
+.Print
+{
+    background-image:url(/images/btnPrint.png);
+}
+.Previous
+{
+    background-image:url(/images/btnPrevious.png);
+}
+.Next
+{
+    background-image:url(/images/btnNext.png);
+}
+
+
+.PrintDate
+{
+    text-align:left;
+    font-size:7pt !important;
+    color:#aaaaaa;
+}
+
+.popout
+{
+    margin-left:4px;
+}
+
+.Changed
+{
+    background-color:#aaddff;
+}
+
+
+.SearchPanel
+{
+    padding:4px; 
+    border:1px solid #999999; 
+    margin:0px; 
+    margin-bottom:4px;    
+    
+    -webkit-border-radius: 5px;     
+    -moz-border-radius: 5px;     
+    -ms-border-radius: 5px;     
+    -o-border-radius: 5px;     
+    border-radius: 5px; 
+}
+
+.PageIcon
+{
+    width:24px;
+    height:24px;
+}
+
+.truncate {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow:ellipsis-word ;
+    ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+.center {text-align:center}
+
+
+
+
+
+
+.BookThumbnail
+{
+    width:200px;
+}
+.BookThumbnail img
+{
+    width:200px;
+    border:none;
+}
+
+.BookCover
+{
+    width:400px;
+}
+
+.BookCover img
+{
+    width:400px;
+    border:none;
+}
+.BookTitle
+{
+    font-size:28pt;
+    margin-top:0px;
+}
+
+.comment
+{
+}
+.comment .name
+{
+    font-weight:bold;
+}
+.comment .date
+{
+    font-style:italic;
+    font-size:smaller;
+}
+.comment .text
+{
+    display:inline-block;
+    width:100%;
+    padding:4px;
+    border:1px solid #dddddd;
+}
+
+.CommandField
+{
+    background-color:#D1DDF1 !important;
+    font-weight:bold;
+    text-align:right;
+}
